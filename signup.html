@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Job Search Platform UI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body onload="checkCookie()">
+
+  <style>
+    .main-container {
+    display: flex;
+    flex-grow: 1;
+    grid-gap: 30px;
+    padding-top: 30px;
+}
+  </style>
+<!-- partial:index.partial.html -->
+
+
+<div class="job" style="padding:0 ;">
+
+  <style>
+    #showPass {
+  display:inline-block;
+  margin-left:-40px;
+}
+#showPass2 {
+  display:inline-block;
+  margin-left:-40px;
+}
+</style>
+
+<style>
+  .centercontainer{
+    position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+  }
+
+  .cdiv{
+    width: 100%;
+    position: absolute;
+       transform: translate(-50%, -50%);
+       top: 55%;
+       left: 50%;
+       display: flex;
+    justify-content: center;
+  }
+
+  .cdivformbox{
+    background: var(--header-bg-color);
+  color: var(--subtitle-color);
+    width: 480px;
+    margin-top: 2px;
+    padding: 35px;
+    line-height: normal;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 50px -35px rgba(0, 0, 0, 0.4);
+  }
+
+  .loginboton{
+    padding-block: 6px;
+font-size: 22px;
+font-weight: 700;
+line-height: 36px;
+letter-spacing: -0.05em;
+text-align: center;
+
+  }
+
+  .lighttext{
+font-size: 14px;
+font-weight: 300;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: center;
+
+  }
+
+  .loginform{
+    width: 100%;
+    padding-block: 10px;
+    display: flex;
+    grid-gap: 10px;
+    flex-direction: column;
+  }
+
+  .formcontent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .label , .forminput{
+    padding-block: 5px;
+  }
+
+  .label{
+   
+font-size: 15px;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+
+  }
+
+  .forminput input[type=text], [type=email], [type=password], [type=number], [type=tel], [type=date], select {
+    width: 100%;
+    padding: 9px 18px;
+    margin: 5px 0 !important;
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    line-height: normal !important;
+    font-family: 'Poppins', sans-serif !important;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: var(--theme-bg-color);
+    color: var(--subtitle-color);
+    outline-color: transparent;
+}
+.forminput input[type=submit] {
+    font-family: inherit;
+    width: 100%;
+    font-size: 14px;
+    background:var(--active-color);
+    color: white;
+    padding: 13px 27px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.create{
+  font-family: Poppins;
+font-size: 14px;
+font-weight: 500;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: center;
+}
+
+.create a{
+  font-family: Poppins;
+font-size: 15px;
+font-weight: 600;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: center;
+
+color: var(--subtitle-color);
+}
+
+.loginbox{
+  background-color: var(--body-bg-color2);
+    height: 100vh;
+    display: flex;
+}
+.loginbox1{
+ 
+
+    width: 100%;
+    background: linear-gradient(180.09deg, rgba(0, 0, 0, 0.176) 27.66%, rgba(0, 0, 0, 0.8) 78.79%), url('https://images.unsplash.com/photo-1519763909878-93bb13c38cf3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=453&q=80');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 85%;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+.mpawa{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.loginbox2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 150px;
+    background-image: url('Vector\ \(3\).png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+
+.welcomemessage{
+    color: #E56346;
+font-size: 38px;
+font-weight: 600;
+line-height: 42px;
+letter-spacing: -2px;
+text-align: left;
+
+}
+
+.presource{
+
+font-size: 16px;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0px;
+text-align: left;
+color: 
+#5C6470;
+
+}
+
+.mpawatext{
+  color: white;
+ margin-top: 10px;
+font-size: 20px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0px;
+text-align: left;
+
+}
+
+
+@media screen and (max-width:1100px) {
+    .loginbox{
+        flex-direction: column;
+    } 
+    .loginbox1{
+        width: 100%;
+        background-position: center;
+    } 
+
+    .loginbox2{
+        
+    padding: 110px;
+
+    }
+
+    .welcomemessage {
+    color: #E56346;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 10px;
+    }
+
+    .presource {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+    }
+
+    .mpawatext {
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 400;
+
+    }
+   
+}
+
+@media screen and (max-width:700px) {
+    .loginbox2{
+        
+        padding: 30px;
+    
+        }
+    
+
+    .loginbox {
+    background-color: var(--body-bg-color2);
+    height: 100%;
+    display: flex;
+
+    }
+
+   
+}
+
+
+</style>
+
+<style>
+@media screen and (max-width:600px) {
+  .job, .job-explain-content, body {
+    background-image: url('https://raw.githubusercontent.com/Manlikevee/jobportal/dfded41b3ff0822a7ec41466fb71914a056cb671/transparentTriangle.svg');
+    background-repeat: repeat;
+ background-attachment: fixed;
+    background-size: cover;
+    }
+}
+</style>
+
+
+
+</div>
+<div class="loginbox">
+    <div class="loginbox1">
+
+<div class="mpawa">
+    <div class="logo">
+        <a href="index.html" style="color: inherit; text-decoration:none;     display: flex;
+        justify-content: center;
+        align-items: center;" >
+    
+       
+     
+    <svg style="width: 100%;
+    margin-right: 6px;
+    " width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.6292 0.746394C16.8748 0.498585 16.4131 0.498585 15.6587 0.746394C13.8183 1.35092 13.8981 5.17663 14.4668 8.95118C13.0269 5.40661 11.138 2.05848 9.23679 2.44167C8.45746 2.59875 8.05818 2.82602 7.5325 3.41175C6.26829 4.82039 20.3125 19.8514 22.6901 22.8012C18.821 24.8172 4.32063 6.73478 2.88716 7.97777C2.29109 8.49463 2.06025 8.88672 1.9018 9.65141C1.5179 11.5042 4.88685 13.337 8.4766 14.7378C4.65368 14.1904 0.8017 14.1253 0.189511 15.9181C-0.0631561 16.658 -0.0631561 17.1108 0.189511 17.8507C0.8017 19.6435 4.65368 19.5784 8.4766 19.031C4.88685 20.4318 1.51789 22.2646 1.90179 24.1174C2.06023 24.8821 2.29108 25.2742 2.88714 25.791C4.3206 27.034 7.58497 25.1266 10.5978 22.8012C8.22022 25.751 6.26826 28.9484 7.53245 30.357C8.05813 30.9428 8.45741 31.1701 9.23674 31.3271C11.138 31.7103 13.0269 28.3621 14.4668 24.8174C13.8981 28.592 13.8182 32.4179 15.6587 33.0224C16.4131 33.2702 16.8748 33.2702 17.6292 33.0224C19.4697 32.4179 19.3898 28.5919 18.821 24.8172C20.261 28.3619 22.15 31.7103 24.0512 31.3271C24.8305 31.1701 25.2298 30.9428 25.7555 30.357C27.0197 28.9484 25.0677 25.751 22.6901 22.8012C25.703 25.1266 28.9674 27.034 30.4008 25.791C30.9969 25.2742 31.2277 24.8821 31.3862 24.1174C31.7701 22.2646 28.4011 20.4318 24.8114 19.031C28.6343 19.5784 32.4862 19.6435 33.0984 17.8507C33.3511 17.1108 33.3511 16.658 33.0984 15.9181C32.4862 14.1253 28.6343 14.1904 24.8114 14.7378C28.4011 13.337 31.7701 11.5042 31.3862 9.65141C31.2277 8.88672 30.9969 8.49463 30.4008 7.97777C28.9673 6.73478 25.7029 8.64223 22.69 10.9677C25.0677 8.01783 27.0197 4.82039 25.7555 3.41175C25.2298 2.82602 24.8305 2.59875 24.0512 2.44167C22.1499 2.05847 20.261 5.40675 18.8211 8.9514C19.3898 5.17678 19.4697 1.35093 17.6292 0.746394Z" fill="#F56D33"/>
+      </svg>
+      
+      <span style="
+      color: white;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: -1.213342308998108px;
+    text-align: left;
+    
+      ">Mpawa</span> 
+      </a>
+      </div>
+   <div class="mpawatext">
+    Promote Health and Wellness for Women with Our Educational Programs and Support Groups.
+   </div>
+</div>
+      
+    </div>
+    <div class="loginbox2">
+
+      <p class="welcomemessage">
+        Welcome back &#128075;
+      </p>
+      
+      <div class="presource">
+        We Provide educational opportunities and resources for women.
+      </div> 
+      <div class="formcontent">
+        <div class="forminput">
+          <input type="submit" value="Sign in with Google">
+        </div>
+        
+        </div>
+
+      <div class="loginform">
+        <form method="post" action="">
+            <div class="loginform">
+            
+            <div class="formcontent">
+            <div class="label">
+              <label for="username">Email</label>
+            </div>
+            <div class="forminput">
+              <input type="email" placeholder="enter your username" name="username" id="id_username">
+            </div>
+            
+            </div>
+
+
+                <div class="formcontent">
+                    <div class="label">
+                      <label for="username">Password</label>
+                    </div>
+                    <div class="forminput">
+                      <input type="email" placeholder="**********" name="username" id="id_username">
+                    </div>
+                    
+                    </div>
+            
+            
+             
+              <div class="formcontent">
+                <div class="forminput">
+                  <input type="submit" value="Login" style="width: fit-content;">
+                </div>
+                
+                </div>
+            
+            
+                <span class="create">
+                  Don’t have an account? <a href="forgotpassword.html" style="color: #E56346;">Create Account</a> 
+                </span>
+            
+            
+            
+            </div>
+            </form>
+      </div>
+    </div>
+</div>
+
+
+<script>
+
+</script>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+  </script>
+
+     <script>
+          $(document).ready(function() {
+$("#showPass").click(function() {
+  if ($("#myPass").attr("type") == "password") {
+    $("#myPass").attr("type", "text");
+  } else {
+    $("#myPass").attr("type", "password");
+  }
+});
+$("#showPass").click(function() {
+  $("#showPass i").toggle();
+});
+});
+
+$(document).ready(function() {
+$("#showPass2").click(function() {
+  if ($("#myPass2").attr("type") == "password") {
+    $("#myPass2").attr("type", "text");
+  } else {
+    $("#myPass2").attr("type", "password");
+  }
+});
+$("#showPass2").click(function() {
+  $("#showPass2 i").toggle();
+});
+});
+
+
+      </script>
+
+</body>
+</html>
