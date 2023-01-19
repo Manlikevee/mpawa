@@ -1,0 +1,288 @@
+#showPass {
+    display:inline-block;
+    margin-left:-40px;
+  }
+  #showPass2 {
+    display:inline-block;
+    margin-left:-40px;
+  }
+  .main-container {
+    display: flex;
+    flex-grow: 1;
+    grid-gap: 30px;
+    padding-top: 30px;
+}
+
+.centercontainer{
+    position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+  }
+
+  .cdiv{
+    width: 100%;
+    position: absolute;
+       transform: translate(-50%, -50%);
+       top: 55%;
+       left: 50%;
+       display: flex;
+    justify-content: center;
+  }
+
+  .cdivformbox{
+    background: var(--header-bg-color);
+  color: var(--subtitle-color);
+    width: 480px;
+    margin-top: 2px;
+    padding: 35px;
+    line-height: normal;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 50px -35px rgba(0, 0, 0, 0.4);
+  }
+
+  .loginboton{
+    padding-block: 6px;
+font-size: 22px;
+font-weight: 700;
+line-height: 36px;
+letter-spacing: -0.05em;
+text-align: center;
+
+  }
+
+  .lighttext{
+font-size: 14px;
+font-weight: 300;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: center;
+
+  }
+
+  .loginform{
+    width: 100%;
+    padding-block: 10px;
+    display: flex;
+    grid-gap: 10px;
+    flex-direction: column;
+  }
+
+  .formcontent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .label , .forminput{
+    padding-block: 5px;
+  }
+
+  .label{
+   
+font-size: 15px;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+
+  }
+
+  .forminput input[type=text], [type=email], [type=password], [type=number], [type=tel], [type=date], select {
+    width: 100%;
+    padding: 9px 18px;
+    margin: 5px 0 !important;
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    line-height: normal !important;
+    font-family: 'Poppins', sans-serif !important;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: var(--theme-bg-color);
+    color: var(--subtitle-color);
+    outline-color: transparent;
+}
+.forminput input[type=submit] {
+    font-family: inherit;
+    width: 100%;
+    font-size: 14px;
+    background:var(--active-color);
+    color: white;
+    padding: 13px 27px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.create{
+  font-family: Poppins;
+font-size: 14px;
+font-weight: 500;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: center;
+}
+
+.create a{
+  font-family: Poppins;
+font-size: 15px;
+font-weight: 600;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: center;
+
+color: var(--subtitle-color);
+}
+
+.loginbox{
+  background-color: var(--body-bg-color2);
+    height: 100vh;
+    display: flex;
+}
+.loginbox1{
+ 
+
+    width: 100%;
+    background: linear-gradient(180.09deg, rgba(0, 0, 0, 0.176) 27.66%, rgba(0, 0, 0, 0.8) 78.79%), url('https://images.unsplash.com/photo-1519763909878-93bb13c38cf3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=453&q=80');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 85%;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+.mpawa{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.loginbox2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 150px;
+    background-image: url('Vector\ \(3\).png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+
+.welcomemessage{
+    color: #E56346;
+font-size: 38px;
+font-weight: 600;
+line-height: 42px;
+letter-spacing: -2px;
+text-align: left;
+
+}
+
+.presource{
+
+font-size: 16px;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0px;
+text-align: left;
+color: 
+#5C6470;
+
+}
+
+.mpawatext{
+  color: white;
+ margin-top: 10px;
+font-size: 20px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0px;
+text-align: left;
+
+}
+
+
+@media screen and (max-width:1100px) {
+    .loginbox{
+        flex-direction: column;
+    } 
+    .loginbox1{
+        width: 100%;
+        background-position: center;
+    } 
+
+    .loginbox2{
+        
+    padding: 110px;
+
+    }
+
+    .welcomemessage {
+    color: #E56346;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 10px;
+    }
+
+    .presource {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+    }
+
+    .mpawatext {
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 400;
+
+    }
+   
+}
+
+@media screen and (max-width:700px) {
+    .loginbox2{
+        
+        padding: 30px;
+    
+        }
+    
+
+    .loginbox {
+    background-color: var(--body-bg-color2);
+    height: 100%;
+    display: flex;
+
+    }
+
+   
+}
+
+
+@media screen and (max-width:600px) {
+    .job, .job-explain-content, body {
+      background-image: url('https://raw.githubusercontent.com/Manlikevee/jobportal/dfded41b3ff0822a7ec41466fb71914a056cb671/transparentTriangle.svg');
+      background-repeat: repeat;
+   background-attachment: fixed;
+      background-size: cover;
+      }
+  }
